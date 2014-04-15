@@ -1,0 +1,38 @@
+<h3>Productos Creados</h3>
+
+<div class="products">
+  <table id="ProductsTable">
+    <thead>
+      <tr>
+       <th>Catalogo</th>
+       <th>Nombre de Producto</th>
+       <th>Codigo de producto</th>
+       <th>Precio Inicial</th>
+       <th>Precio Promocional</th>
+       <th>Descripcion</th>
+       <th>Url Imagen</th>
+       <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @products.each do |product| %>
+            <tr>
+                <td><%= product.catalog.name %></td>
+                <td><%= link_to product.name.capitalize, product_path(product) %></td>
+                <td><%= product.code %></td>
+                <td><%= number_to_currency product.initial_price %></td>
+                <td><%= number_to_currency product.promotional_price %></td>
+                <td><%= product.description %></td>
+                <td><%= product.foto %></td>
+                <td>
+                    <%= link_to(image_tag('edit.png', width: '30px;', title: 'Editar'), edit_product_path(product)) %>
+                    <%= link_to(image_tag('delete.png', width: '30px;', title: 'Eliminar'), product_path(product), method: 'delete', confirm: "¿Está seguro de que desea eliminar el producto?") %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>
+
+<br />
+<%= link_to "Crear producto", new_product_path() %>

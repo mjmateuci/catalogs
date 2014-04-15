@@ -1,0 +1,28 @@
+<div class="form-group">
+    <%= f.label :catalog_id, "Catalogo", class: "col-sm-2 control-label" %>
+    <div class="col-sm-10"><%= f.collection_select :catalog_id, Catalog.all, :id, :name, {:include_blank=> "Escoja un catalogo"} %></div>
+</div>
+<div class="form-group">
+    <%= f.label :name, "Nombre", class: "col-sm-2 control-label" %>
+    <div class="col-sm-10"><%= f.text_field :name, size: 50 %></div>
+</div>
+<div class="form-group">
+    <%= f.label :code, "Codigo", class: "col-sm-2 control-label" %>
+    <div class="col-sm-10"><%= f.text_field :code, size: 50 %></div>
+</div>
+<div class="form-group">
+    <%= f.label :description, "Descripcion", class: "col-sm-2 control-label" %>
+    <div class="col-sm-10"><%= f.text_area :description, cols: 48, rows: 5 %></div>
+</div>
+<div class="form-group">
+    <%= f.label :initial_price, "P. Inicial", class: "col-sm-2 control-label" %>
+    <div class="col-sm-10"><%= f.text_field :initial_price, size: 50 %></div>
+</div>
+<div class="form-group">
+    <%= f.label :promotional_price, "P. Promocional", class: "col-sm-2 control-label" %>
+    <div class="col-sm-10"><%= f.text_field :promotional_price, size: 50 %></div>
+</div>
+<div class="form-group">
+    <%= f.label :foto, "URL de Imagen", class: "col-sm-2 control-label" %>
+    <div class="col-sm-10"><%= f.text_field :foto, size: 50 %></div>
+</div>

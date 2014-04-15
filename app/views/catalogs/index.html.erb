@@ -1,0 +1,69 @@
+<%= image_tag "logo-web.png", class: "center" %>
+
+<div class="alert alert-info center" style="width: 70%;">Primero se debe crear el catalogo, luego crear productos y asociarlo al mismo. Para previsualizar un catalogo haga click en el nombre.</div>
+
+<div class="catalogs center">
+  <div class="panel panel-default">
+    <div class="panel-heading">Catalogos Creados</div>
+    <table id="CatalogsTable" class="table">
+      <thead>
+        <tr>
+         <th>Nombre de Catalogo</th>
+         <th>Tipo</th>
+         <th>Fecha de creacion</th>
+         <th>Ultima edicion</th>
+         <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% @catalogs.each do |catalog| %>
+              <tr>
+                  <td><%= link_to catalog.name.capitalize, catalog_path(catalog) %></td>
+                  <td><%= catalog.kind %></td>
+                  <td><%= catalog.created_at.strftime("%d/%m/%y %H:%M") %></td>
+                  <td><%= catalog.updated_at.strftime("%d/%m/%y %H:%M") %></td>
+                  <td>
+                      <%= link_to(image_tag('edit.png', width: '30px;', title: 'Editar'), edit_catalog_path(catalog)) %>
+                      <%= link_to(image_tag('delete.png', width: '30px;', title: 'Eliminar'), catalog_path(catalog), method: 'delete', confirm: "¿Está seguro de que desea eliminar el catalogo?") %>
+                  </td>
+              </tr>
+          <% end %>
+      </tbody>
+    </table>
+  </div>
+  <%= link_to "Crear catalogo", new_catalog_path(), class: "btn btn-success" %>
+</div>
+
+<div class="catalogs center">
+  <div class="panel panel-default">
+    <div class="panel-heading">Productos Creados</div>
+    <table id="ProductsTable" class="table">
+      <thead>
+        <tr>
+         <th>Catalogo</th>
+         <th>Nombre de Producto</th>
+         <th>Codigo de producto</th>
+         <th>Precio Inicial</th>
+         <th>Precio Promocional</th>
+         <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% @products.each do |product| %>
+              <tr>
+                  <td><%= product.catalog.name %></td>
+                  <td><%= link_to product.name.capitalize, product_path(product) %></td>
+                  <td><%= product.code %></td>
+                  <td><%= number_to_currency product.initial_price %></td>
+                  <td><%= number_to_currency product.promotional_price %></td>
+                  <td>
+                      <%= link_to(image_tag('edit.png', width: '30px;', title: 'Editar'), edit_product_path(product)) %>
+                      <%= link_to(image_tag('delete.png', width: '30px;', title: 'Eliminar'), product_path(product), method: 'delete', confirm: "¿Está seguro de que desea eliminar el producto?") %>
+                  </td>
+              </tr>
+          <% end %>
+      </tbody>
+    </table>
+  </div>
+<%= link_to "Crear producto", new_product_path(), class: "btn btn-primary" %>
+</div>
