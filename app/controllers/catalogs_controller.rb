@@ -6,7 +6,11 @@ class CatalogsController < ApplicationController
 
     def show
         @catalog = Catalog.find(params[:id])
-        render layout: "catalog_frente"
+        if @catalog.kind == "Frente"
+            render :partial => 'catalog_frente', :layout => 'catalog_frente'
+        else
+            render :partial => 'catalog_atras', :layout => 'catalog_atras'
+        end
     end
 
     def edit

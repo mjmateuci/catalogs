@@ -1,0 +1,107 @@
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #FAFAFA;
+        font: 12pt "Tahoma";
+    }
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+    .page {
+        width: 21cm;
+        min-height: 29.7cm;
+        padding: 2cm;
+        margin: 1cm auto;
+        border: 1px #D3D3D3 solid;
+        border-radius: 5px;
+        background: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }    
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    @media print {
+        .page {
+            margin: 0;
+            border: initial;
+            border-radius: initial;
+            width: initial;
+            min-height: initial;
+            box-shadow: initial;
+            background: initial;
+            page-break-after: always;
+        }
+    }
+
+    .catalog-body {
+        margin-top: -20px;
+    }
+
+    .title {
+        font-size: 16pt;
+        padding: 5px;
+        text-align: center;
+        background-color: red;
+        font-weight: bold;
+        color: white;
+    }
+
+    .description {
+        margin-top: 1px;
+    }
+
+    .showProducts {
+        margin-top: -5px;
+        width: 100%;
+    }
+
+    .product1 {
+        width: 50%; 
+        float: left;
+    }
+
+    .product2 {
+        width: 50%; 
+        float: right;
+    }
+
+    .productTitle {
+        font-weight: bold;
+        font-family: Verdana;
+    }
+
+    .productCode {
+        margin-left: 2px;
+        font-weight: normal;
+        font-size: 10pt;
+    }
+
+    .productDescription {
+        margin-top: -14px;
+        font-size: 8pt;
+    }
+
+    .priceSection {
+        text-align: center;
+    }
+
+    .productFPrice {
+        text-align: center;
+        margin-right: 4px;
+        font-size: 10pt;
+        text-decoration: line-through;
+    }
+
+    .productPrice {
+        text-align: center;
+        background-color: blue;
+        color: white;
+    }
+
+    .footer {
+        font-size: 8pt;
+        display: inline-block;
+        margin-top: 20px;
+    }

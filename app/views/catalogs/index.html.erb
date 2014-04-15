@@ -41,8 +41,8 @@
       <thead>
         <tr>
          <th>Catalogo</th>
-         <th>Nombre de Producto</th>
-         <th>Codigo de producto</th>
+         <th>Nombre</th>
+         <th>Codigo</th>
          <th>Precio Inicial</th>
          <th>Precio Promocional</th>
          <th>Acciones</th>
@@ -51,7 +51,7 @@
       <tbody>
           <% @products.each do |product| %>
               <tr>
-                  <td><%= product.catalog.name %></td>
+                  <td><%= product.catalog.name if product.catalog %></td>
                   <td><%= link_to product.name.capitalize, product_path(product) %></td>
                   <td><%= product.code %></td>
                   <td><%= number_to_currency product.initial_price %></td>

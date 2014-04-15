@@ -1,19 +1,19 @@
 <div class="form-group">
-    <%= f.label :name, "Nombre", class: "col-sm-2 control-label" %>
-    <div class="col-sm-10"><%= f.text_field :name, size: 50 %></div>
+    <p><%= f.label :name, "Nombre" %></p>
+    <p><%= f.text_field :name, size: 30 %></p>
 </div>
 <br />
 <div class="form-group">
-    <%= f.label :kind, "Tipo", class: "col-sm-2 control-label" %>
-    <div class="col-sm-10"><%= f.collection_select :kind, ["Frente", "Atras"], :to_s, :to_s %></div>
+    <p><%= f.label :kind, "Tipo" %></p>
+    <p><%= f.collection_select :kind, ["Frente", "Atras"], :to_s, :to_s %></p>
 </div>
 <br />
 <div class="form-group">
-    <%= f.label :description, "Descripcion", class: "col-sm-2 control-label" %>
-    <div class="col-sm-10"><%= f.text_field :description, size: 50%></div>
+    <p><%= f.label :description, "Descripcion" %></p>
+    <p><%= f.text_field :description, size: 30%></p>
 </div>
 <br />
 <div class="form-group">
-    <%= f.label :footer, "Pie de catalogo", class: "col-sm-2 control-label" %>
-    <div class="col-sm-10"><%= f.text_area :footer, rows: 5, cols: 48 %></div>
+    <p><%= f.label :footer, "Pie de catalogo" %></p>
+    <p><%= f.text_area :footer, rows: 5, cols: 28 %></p>
 </div>

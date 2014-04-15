@@ -24,6 +24,11 @@ body {
     width: 70%;
 }
 
+.backButton {
+    margin-top: 3%;
+    margin-left: 35%;
+}
+
 .center {
     display: block;
     margin-left: auto;
