@@ -9,6 +9,11 @@
 </div>
 <br />
 <div class="form-group">
+    <p><%= f.label :background, "URL de fondo" %></p>
+    <p><%= f.text_field :background, size: 30 %><%= link_to "Cargar Imagen", "http://postimage.org/", target: "_blank" %></p>
+</div>
+<br />
+<div class="form-group">
     <p><%= f.label :description, "Descripcion" %></p>
     <p><%= f.text_field :description, size: 30%></p>
 </div>

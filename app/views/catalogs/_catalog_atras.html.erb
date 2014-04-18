@@ -33,3 +33,10 @@
         <div class="footer"><%= @catalog.footer %></div>
     </div>
 </div>
+
+<style>
+.page {
+    <% unless @catalog.background.empty? %>
+        background: url(<%= @catalog.background %>);
+    <% end %>
+}
