@@ -19,7 +19,7 @@ class CatalogsController < ApplicationController
 
     def create
         @catalog = Catalog.new(params[:catalog])
-        redirect_to @catalog.save ? catalog_path(@catalog) : catalogs_path 
+        @catalog.save
     end
 
     def new
@@ -28,7 +28,7 @@ class CatalogsController < ApplicationController
 
     def update
         @catalog  = Catalog.find(params[:id])
-        redirect_to  @catalog.update_attributes(params[:catalog]) ? catalog_path(@catalog) : catalogs_path 
+        @catalog.update_attributes(params[:catalog])
     end
 
     def destroy

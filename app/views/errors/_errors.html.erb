@@ -1,0 +1,13 @@
+<div id="errorExplanation" class="line">
+  <div class="unit size1of8">
+    <%= image_tag "warning_icon.png", height: "100px;", style: "margin-left: 20px;" %>
+  </div>
+  <div class="unit size7of8">
+    <strong>No se pudo <%= method %> <%= model %>:
+    <ul>
+      <% errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

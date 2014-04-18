@@ -1,0 +1,6 @@
+$("#errorExplanation").remove();
+<% unless @product.errors.empty? %>
+  $("#errorContainer").html('<%= escape_javascript(render partial: "errors/errors", locals: {errors: @product.errors, method: "crear", model: "el producto"}) %>');
+<% else %>
+    window.location.replace("<%= product_path(@product) %>");
+<% end %>

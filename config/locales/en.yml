@@ -20,4 +20,27 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        catalog:
+          blank: "no puede estar en blanco"
+          taken: "ya ha sido seleccionado para otro catalogo"
+        product:
+          blank: "no puede estar en blanco"
+          taken: "ya ha sido seleccionado para otro producto"
+          not_a_number: "no es un numero"
+
+    attributes:
+      catalog:
+        name: "El nombre"
+        description: "La descripcion"
+        kind: "El tipo"
+      product:
+        name: "El nombre"
+        code: "El codigo"
+        initial_price: "El precio inicial"
+        promotional_price: "El precio promocional"
+        description: "La descripcion"
+        foto: "La URL de la imagen"
+        catalog_id: "El catalogo"

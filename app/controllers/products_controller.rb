@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
 
     def create
         @product = Product.new(params[:product])
-        redirect_to @product.save ? product_path(@product) : catalogs_path
+        @product.save
     end
 
     def new
@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
 
     def update
         @product  = Product.find(params[:id])
-        redirect_to @product.update_attributes(params[:product]) ? product_path(@product) : catalogs_path
+        @product.update_attributes(params[:product])
     end
 
     def destroy

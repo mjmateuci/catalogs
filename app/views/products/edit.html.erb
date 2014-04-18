@@ -1,7 +1,8 @@
 <%= image_tag "logo-web.png", class: "center" %>
 
 <div class="jumbotron center" style="width: 50%">
-    <%= form_for(@product) do |f| %>
+    <div id="errorContainer"></div>
+    <%= form_for(@product, :remote => true) do |f| %>
         <%= render 'form',  f: f %>
         <div class="buttons-panel">
             <%= f.submit "Actualizar Producto", disable_with: "Actualizando Producto", class: "btn btn-success" %>

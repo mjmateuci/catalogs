@@ -85,3 +85,9 @@ body {
     background-color: blue;
     color: white;
 }
+
+#errorExplanation {
+  text-align: center;
+  margin-top: 20px;
+  color: auto;
+}

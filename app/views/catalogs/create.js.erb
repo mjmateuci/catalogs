@@ -1,0 +1,6 @@
+$("#errorExplanation").remove();
+<% unless @catalog.errors.empty? %>
+  $("#errorContainer").html('<%= escape_javascript(render partial: "errors/errors", locals: {errors: @catalog.errors, method: "crear", model: "el catalogo"}) %>');
+<% else %>
+    window.location.replace("<%= catalog_path(@catalog) %>");
+<% end %>

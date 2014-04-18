@@ -41,7 +41,7 @@
                 <% end %>
            <% end %>
         </div>
-        <div class="footer"><%= @catalog.footer %></div>
+        <div class="footer"><%= @catalog.footer unless @catalog.footer.empty? %></div>
     </div>
 </div>
 
