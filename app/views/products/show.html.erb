@@ -4,10 +4,15 @@
     <div class="product1">
         <p class="productTitle"><%= @product.name %><span class="productCode">(<%= @product.code %>)</span></p></tr>
         <p class="productDescription"><%= @product.description %></p></tr>
-        <%= image_tag @product.foto, width: "200px", height: "200px", class: "center" %></tr>
-        <span class="productFPrice"><%= number_to_currency @product.initial_price %></span>
-        <span class="productPrice"><%= number_to_currency @product.promotional_price %></span>
+        <%= image_tag @product.foto, width: "200px", height: "200px",
+        class: "center" %></tr>
+        <% if @product.promotional_price %>
+          <span class="productFPrice"><%= number_to_currency @product.initial_price %></span>
+          <span class="productPrice"><%= number_to_currency @product.promotional_price %></span>
+        <% else %>
+          <span class="productPrice"><%= number_to_currency @product.initial_price %></span>
+        <% end %>
     </div>
 </div>
 
-<%= link_to "Volver a la pagina principal", catalogs_path, class: "btn btn-info backButton" %>
+<%= link_to "Volver a la pagina principal", catalogs_path, class: "btn btn-info backButton"%>
