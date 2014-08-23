@@ -17,7 +17,7 @@
         border-radius: 5px;
         background: white;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    }    
+    }
     @page {
         size: A4;
         margin: 0;
@@ -37,6 +37,10 @@
 
     .catalog-body {
         margin-top: -20px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 
     .title {
@@ -58,12 +62,12 @@
     }
 
     .product1 {
-        width: 50%; 
+        width: 50%;
         float: left;
     }
 
     .product2 {
-        width: 50%; 
+        width: 50%;
         float: right;
     }
 

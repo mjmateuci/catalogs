@@ -32,7 +32,7 @@ body {
 .center {
     display: block;
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
 }
 
 .welcomeMsg {
@@ -66,22 +66,20 @@ body {
 .productDescription {
     margin-left: 5px;
     margin-top: -14px;
-    font-size: 8pt;
+    font-size: 9pt;
 }
 
 .priceSection {
+    margin-top: 10px;
     text-align: center;
 }
 
 .productFPrice {
-    text-align: center;
-    margin-right: 4px;
     font-size: 10pt;
     text-decoration: line-through;
 }
 
 .productPrice {
-    text-align: center;
     background-color: blue;
     color: white;
 }
@@ -90,4 +88,9 @@ body {
   text-align: center;
   margin-top: 20px;
   color: auto;
+}
+
+.productContainer {
+    width: 100%;
+    heigth: 100%;
 }

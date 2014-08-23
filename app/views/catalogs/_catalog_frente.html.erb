@@ -37,7 +37,7 @@
                             <tr ><p class="productTitle"><%= product2.name %><span class="productCode">(<%= product2.code %>)</span></p></tr>
                             <tr><p class="productDescription"><%= product2.description %></p></tr>
                             <tr><%= image_tag product2.foto, width: "200px", height: "200px" %></tr>
-                            <tr>
+                            <tr class="priceSection">
                               <% unless product2.promotional_price.blank? %>
                                 <span class="productFPrice"><%= number_to_currency product2.initial_price %></span>
                                 <span class="productPrice"><%= number_to_currency product2.promotional_price %></span>
